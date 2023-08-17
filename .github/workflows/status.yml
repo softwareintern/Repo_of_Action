@@ -1,0 +1,20 @@
+name: commit an update
+on:
+  workflow_dispatch:
+                
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+      steps:
+      - name: check out this repo
+        uses: actions/checkout@v2
+      - name: add x to the readme file
+        run: echo 'x' >> README.md
+      - name: commit and push the change
+        run: |-
+          git config user.name "timBrockman"
+          git config user.email "tim@timbrockman.com"
+          git add -A
+          commit_time=$(date -u)
+          git commit -m "readme update at ${commit_time}" || exit 0
+          git push
