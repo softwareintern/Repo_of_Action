@@ -1,4 +1,4 @@
-name: commit an update
+name: push a change
 on:
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ jobs:
       - name: check out this repo
         uses: actions/checkout@v2
       - name: add x to the readme file
-        run: echo 'x' >> README.md
+        run: echo 'x' >> test.txt
       - name: commit and push the change
         run: |-
           git config user.name "timBrockman"
