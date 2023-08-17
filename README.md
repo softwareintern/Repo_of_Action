@@ -1,4 +1,4 @@
-#Append to a file, then push
+# Append to a file, then push
 This is a github action that:
   1. pulls the repo
   2. appends an 'x' to the end of the readme file
