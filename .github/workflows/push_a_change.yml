@@ -6,13 +6,13 @@ permissions:
   contents: write
                 
 jobs:
-  test_job:
+  change_then_push:
     runs-on: ubuntu-latest
     steps:
       - name: check out this repo
         uses: actions/checkout@v2
       - name: add x to the readme file
-        run: echo 'x' >> test.txt
+        run: echo 'x' >> xs.txt
       - name: commit and push the change
         run: |-
           git config user.name "timBrockman"
