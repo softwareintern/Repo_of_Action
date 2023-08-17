@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
                 
 jobs:
-  scheduled:
+  test_job:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - name: check out this repo
         uses: actions/checkout@v2
       - name: add x to the readme file
