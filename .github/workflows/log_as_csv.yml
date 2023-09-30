@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: check out this repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: create log.csv
         run: echo "commit,author name,author email,author date,commit message" > log.csv
       - name: save git log as log.csv
