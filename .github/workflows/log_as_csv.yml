@@ -11,8 +11,10 @@ jobs:
     steps:
       - name: check out this repo
         uses: actions/checkout@v2
+      - name: create log.csv
+        run: echo "commit,author name,author email,author date,commit message" > log.csv
       - name: save git log as log.csv
-        run: git log --date=short --pretty=format:'"%H","%an","%ae","%ad","%s"' > log.csv
+        run: git log --date=short --pretty=format:'"%H","%an","%ae","%ad","%s"' >> log.csv
       - name: delete lines containing "automatic log update" string
         run: sed -i '/automatic log update/d' log.csv
       - name: commit and push the change
