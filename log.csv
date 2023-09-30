@@ -1,1 +1,2 @@
-"8a43d4846856397628992cf7cb41a1b5270c76ea","Tim Brockman","timBrockman@users.noreply.github.com","2023-09-30","add log_as_csv"
+commit,author name,author email,author date,commit message
+"0430c6a4c4f069a93b1034e17f39b9b4ed02fa39","Tim Brockman","timBrockman@users.noreply.github.com","2023-09-30","remove empty line"
