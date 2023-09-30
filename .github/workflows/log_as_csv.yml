@@ -6,7 +6,7 @@ permissions:
   contents: write
                 
 jobs:
-  change_then_push:
+  save_git_log_as_csv_then_push:
     runs-on: ubuntu-latest
     steps:
       - name: check out this repo
